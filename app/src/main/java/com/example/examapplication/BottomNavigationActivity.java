@@ -10,17 +10,17 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.examapplication.databinding.ActivityNavigationBinding;
+import com.example.examapplication.databinding.ActivityBottomNavigationBinding;
 
-public class NavigationActivity extends AppCompatActivity {
+public class BottomNavigationActivity extends AppCompatActivity {
 
-    private ActivityNavigationBinding binding;
+    private ActivityBottomNavigationBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityNavigationBinding.inflate(getLayoutInflater());
+        binding = ActivityBottomNavigationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
@@ -29,7 +29,7 @@ public class NavigationActivity extends AppCompatActivity {
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_navigation);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_bottom_navigation);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
     }

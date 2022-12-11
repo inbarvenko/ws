@@ -15,4 +15,5 @@
         <item>Adm1</item>
         <item>Adm2</item>
     </string-array>
+    <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
 </resources>
